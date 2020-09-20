@@ -48,7 +48,7 @@ function HomeScreen() {
                {loadingDelete && <div>Loading...</div>}
                {errorDelete && <div>{errorDelete}</div>}
                {loading && <div>Loading...</div>}
-               {error && <div>{error}</div>}
+               {/* {error && <div>{error}</div>} */}
                <input
                   name='title'
                   onChange={event => setTitle(event.target.value)}
@@ -68,7 +68,13 @@ function HomeScreen() {
          <div>
             {console.log('Notes=>', notes)}
             {!notes ? (
-               <div> Create notes</div>
+               <div style={{ textAlign: 'center' }}>
+                  <h1
+                     style={{ textTransform: 'uppercase', marginTop: '150px' }}
+                  >
+                     No notes to show..
+                  </h1>
+               </div>
             ) : (
                notes.map(note => {
                   return (

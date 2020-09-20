@@ -12,7 +12,6 @@ router.get('/', isAuth,async(req,res)=>{
 
 router.post("/",isAuth,async(req,res)=>{
     const {title,note} = req.body;
-    console.log("req.user=>",req.user);
     const notes = new Note({
         title,
         note,
